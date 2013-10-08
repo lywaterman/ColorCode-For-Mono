@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85DED3D5-EA1B-4615-87F3-EEBC01DFFD4A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>colorcode</RootNamespace>
+    <AssemblyName>colorcode</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MyClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ColorCode\CodeColorizer.cs" />
+    <Compile Include="ColorCode\Formatters.cs" />
+    <Compile Include="ColorCode\ICodeColorizer.cs" />
+    <Compile Include="ColorCode\IFormatter.cs" />
+    <Compile Include="ColorCode\ILanguage.cs" />
+    <Compile Include="ColorCode\IStyleSheet.cs" />
+    <Compile Include="ColorCode\LanguageRule.cs" />
+    <Compile Include="ColorCode\Languages.cs" />
+    <Compile Include="ColorCode\Style.cs" />
+    <Compile Include="ColorCode\StyleDictionary.cs" />
+    <Compile Include="ColorCode\StyleSheets.cs" />
+    <Compile Include="ColorCode\Common\ExtensionMethods.cs" />
+    <Compile Include="ColorCode\Common\Guard.cs" />
+    <Compile Include="ColorCode\Common\ILanguageRepository.cs" />
+    <Compile Include="ColorCode\Common\LanguageId.cs" />
+    <Compile Include="ColorCode\Common\LanguageRepository.cs" />
+    <Compile Include="ColorCode\Common\ScopeName.cs" />
+    <Compile Include="ColorCode\Compilation\CompiledLanguage.cs" />
+    <Compile Include="ColorCode\Compilation\ILanguageCompiler.cs" />
+    <Compile Include="ColorCode\Compilation\LanguageCompiler.cs" />
+    <Compile Include="ColorCode\Compilation\RuleCaptures.cs" />
+    <Compile Include="ColorCode\Compilation\RuleFormats.cs" />
+    <Compile Include="ColorCode\Compilation\Languages\Asax.cs" />
+    <Compile Include="ColorCode\Compilation\Languages\Ashx.cs" />
+    <Compile Include="ColorCode\Compilation\Languages\Aspx.cs" />
+    <Compile Include="ColorCode\Compilation\Languages\AspxCs.cs" />
+    <Compile Include="ColorCode\Compilation\Languages\AspxVb.cs" />
+    <Compile Include="ColorCode\Compilation\Languages\Cpp.cs" />
+    <Compile Include="ColorCode\Compilation\Languages\CSharp.cs" />
+    <Compile Include="ColorCode\Compilation\Languages\Css.cs" />
+    <Compile Include="ColorCode\Compilation\Languages\FSharp.cs" />
+    <Compile Include="ColorCode\Compilation\Languages\Haskell.cs" />
+    <Compile Include="ColorCode\Compilation\Languages\Html.cs" />
+    <Compile Include="ColorCode\Compilation\Languages\Java.cs" />
+    <Compile Include="ColorCode\Compilation\Languages\JavaScript.cs" />
+    <Compile Include="ColorCode\Compilation\Languages\Koka.cs" />
+    <Compile Include="ColorCode\Compilation\Languages\Markdown.cs" />
+    <Compile Include="ColorCode\Compilation\Languages\Php.cs" />
+    <Compile Include="ColorCode\Compilation\Languages\PowerShell.cs" />
+    <Compile Include="ColorCode\Compilation\Languages\Sql.cs" />
+    <Compile Include="ColorCode\Compilation\Languages\Typescript.cs" />
+    <Compile Include="ColorCode\Compilation\Languages\VbDotNet.cs" />
+    <Compile Include="ColorCode\Compilation\Languages\Xml.cs" />
+    <Compile Include="ColorCode\Formatting\HtmlClassFormatter.cs" />
+    <Compile Include="ColorCode\Formatting\HtmlFormatter.cs" />
+    <Compile Include="ColorCode\Formatting\TextInsertion.cs" />
+    <Compile Include="ColorCode\Parsing\ILanguageParser.cs" />
+    <Compile Include="ColorCode\Parsing\LanguageParser.cs" />
+    <Compile Include="ColorCode\Parsing\Scope.cs" />
+    <Compile Include="ColorCode\Properties\AssemblyInfo.cs" />
+    <Compile Include="ColorCode\Styling\StyleSheets\DefaultStyleSheet.cs" />
+    <Compile Include="ColorCode\Formatting\HttpEncoder.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="ColorCode\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ColorCode\ColorCode.csproj" />
+  </ItemGroup>
+</Project>
